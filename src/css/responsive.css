@@ -1,1 +1,145 @@
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}@keyframes scrollDot{0%{transform:translateY(0);opacity:1}100%{transform:translateY(8px);opacity:0}}@keyframes scan{0%,100%{top:10%}50%{top:90%}}@keyframes blink{50%{opacity:0}}@media(max-width:900px){.section-wrap,.site-header{width:calc(100% - 40px)}.section-pad{padding-block:90px}.hero{grid-template-columns:1fr 0.85fr;min-height:calc(100svh - 78px)}.hero h1{font-size:clamp(45px,7vw,68px)}.hero-visual{min-height:330px}.about{gap:50px}.skills-grid{grid-template-columns:repeat(2,1fr)}.project-art{height:210px}.nav{gap:18px}.timeline-item{grid-template-columns:135px 1fr auto;gap:18px}.timeline-marker{left:126px}}@media(max-width:680px){.section-wrap,.site-header{width:calc(100% - 36px)}.site-header{height:68px;gap:10px}.menu-toggle{display:flex;margin-left:auto;flex-direction:column;justify-content:center;align-items:center;gap:5px}.menu-toggle span{width:15px;height:1px;background:var(--text);transition:transform .2s}.theme-toggle{width:35px;height:35px}.nav{position:absolute;top:60px;left:0;right:0;padding:17px;background:var(--panel);border:1px solid var(--line);border-radius:8px;display:none;flex-direction:column;align-items:stretch;gap:0;box-shadow:var(--shadow)}.nav.is-open{display:flex}.nav a{padding:13px 8px}.nav .nav-contact{margin-top:5px;text-align:center}.hero{grid-template-columns:1fr;padding-top:62px;padding-bottom:70px;min-height:auto}.hero-copy{padding:0}.hero h1{font-size:clamp(48px,13vw,76px)}.hero-intro{font-size:13px;max-width:390px}.hero-meta{margin-top:30px;gap:15px}.hero-visual{height:330px;min-height:0;margin-top:12px}.visual-caption{bottom:4%}.chip-top{top:10%;right:0}.chip-bottom{bottom:13%;left:0}.scroll-cue{bottom:18px}.section-pad{padding-block:75px}.about{grid-template-columns:1fr;gap:28px}.about-lead{font-size:20px}.about-facts{gap:9px}.fact-number{font-size:26px}.fact-label{font-size:7px}.skills-grid{gap:9px;margin-top:35px}.skill-card{padding:17px;min-height:205px}.skill-symbol{margin-bottom:25px}.skill-card h3{font-size:13px}.skill-card p{font-size:10px}.projects-head{display:block}.projects-intro{margin-top:20px}.project-grid{grid-template-columns:1fr;margin-top:32px;gap:15px}.project-art{height:220px}.project-info{padding:20px}.project-info h3{font-size:21px}.project-info>p{min-height:0}.timeline{margin-top:35px}.timeline-item{grid-template-columns:1fr auto;gap:8px 15px;padding:23px 0}.timeline-date{grid-column:1/-1}.timeline-item>div:nth-child(3){padding-left:0}.timeline-marker{left:auto;right:0;top:25px;width:6px;height:6px}.timeline-tag{grid-column:1/-1;justify-self:start;margin-top:7px}.certifications{margin-top:48px}.contact{padding-top:15px}.contact-panel{padding:30px 22px}.contact-panel h2{font-size:clamp(42px,12vw,65px)}.contact-footer{margin-top:48px;flex-direction:column;gap:10px}.social-links{gap:17px}.site-footer{padding-block:20px;min-height:100px;flex-wrap:wrap}.site-footer>span:nth-child(2){order:3;width:100%}.modal-panel{padding:28px 22px}.modal-panel h2{font-size:27px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.scene3d{display:none}}
+
+/* ==========================================
+   STEP 4 — RESPONSIVE DESIGN
+   ========================================== */
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+html {
+  scroll-padding-top: 90px;
+}
+
+body {
+  overflow-wrap: anywhere;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .section-wrap {
+    width: min(100% - 40px, 760px);
+  }
+
+  .projects-head {
+    gap: 24px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-visual {
+    max-width: 100%;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .section-wrap {
+    width: calc(100% - 32px);
+  }
+
+  .section-pad {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .projects-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .project-card {
+    min-width: 0;
+    transform: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+
+  .project-art {
+    min-width: 0;
+  }
+
+  .contact-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .contact-actions .button {
+    max-width: 100%;
+  }
+
+  #projectModal {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  #projectModal .modal-panel {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100dvh - 20px);
+  }
+
+  #modalTags {
+    gap: 6px;
+  }
+
+  .menu-toggle,
+  .theme-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Very narrow phones */
+@media (max-width: 380px) {
+  .section-wrap {
+    width: calc(100% - 24px);
+  }
+
+  .section-pad {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  #projectModal {
+    padding: 6px;
+  }
+
+  #projectModal .modal-panel {
+    max-height: calc(100dvh - 12px);
+  }
+}
+
+/* Reduce unnecessary motion and effects */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

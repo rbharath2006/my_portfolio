@@ -22,6 +22,7 @@
   </head>
 
   <body>
+    
     <div class="noise" aria-hidden="true"></div>
 
     <!-- Navigation -->
@@ -612,47 +613,3 @@
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
-
-/* Copy email button fix */
-(() => {
-  const button = document.querySelector("[data-copy-email]");
-  const status = document.querySelector(".copy-email-status");
-
-  if (!button || button.dataset.copyFixAdded) return;
-  button.dataset.copyFixAdded = "true";
-
-  button.addEventListener("click", async () => {
-    const email = button.getAttribute("data-copy-email");
-
-    try {
-      if (navigator.clipboard && window.isSecureContext) {
-        await navigator.clipboard.writeText(email);
-      } else {
-        const field = document.createElement("textarea");
-        field.value = email;
-        field.style.position = "fixed";
-        field.style.opacity = "0";
-        document.body.appendChild(field);
-        field.select();
-
-        const success = document.execCommand("copy");
-        field.remove();
-
-        if (!success) throw new Error("Copy failed");
-      }
-
-      if (status) status.textContent = "Email copied successfully!";
-      button.innerHTML = 'Copied! <span aria-hidden="true">✓</span>';
-    } catch (error) {
-      if (status) {
-        status.textContent = "Copy failed. Email: " + email;
-      }
-    }
-
-    setTimeout(() => {
-      if (status) status.textContent = "";
-      button.innerHTML =
-        'Copy email <span aria-hidden="true">⧉</span>';
-    }, 3000);
-  });
-})();

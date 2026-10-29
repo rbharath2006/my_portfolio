@@ -492,15 +492,22 @@ function closeModal() {
   lastFocused?.focus?.();
 }
 
+
 $$("[data-project]").forEach(element => {
   element.addEventListener("click", event => {
-    if (event.target.closest("button") || element.matches("button")) {
-      openProject(element.dataset.project);
-    } else if (element.classList.contains("project-card")) {
-      openProject(element.dataset.project);
+    // Let the clicked child button handle its own event.
+    // Prevent the parent card from opening the modal a second time.
+    if (
+      event.target.closest("button") &&
+      !element.matches("button")
+    ) {
+      return;
     }
+
+    openProject(element.dataset.project);
   });
 });
+
 
 $$("[data-close]", modal).forEach(element => {
   element.addEventListener("click", closeModal);
