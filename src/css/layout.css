@@ -1123,3 +1123,136 @@ body > :not(#purple-particle-canvas) {
     transition: none !important;
   }
 }
+
+/* ==========================================
+   STEP 3 — INTERACTION & VISUAL POLISH
+   ========================================== */
+
+/* 1. Hero text glow */
+.hero-gradient-text {
+  text-shadow: 0 0 28px rgba(168, 85, 247, 0.22);
+}
+
+.hero-role-line {
+  min-height: 1.7em;
+}
+
+.hero-role-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 5px;
+  vertical-align: -2px;
+  background: #c084fc;
+  animation: portfolioCursorBlink 900ms steps(2, start) infinite;
+}
+
+@keyframes portfolioCursorBlink {
+  to { visibility: hidden; }
+}
+
+/* 2. Skill cards */
+.skill-card {
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .skill-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(192, 132, 252, 0.55);
+    box-shadow: 0 12px 32px rgba(95, 35, 150, 0.18);
+  }
+}
+
+/* 3. Project cards */
+.project-card {
+  transition:
+    transform 260ms ease,
+    border-color 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.project-card .project-art {
+  transition: filter 260ms ease;
+}
+
+.project-card .project-arrow {
+  display: inline-block;
+  transition: transform 240ms ease, color 240ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-art {
+    filter: brightness(1.08);
+  }
+
+  .project-card:hover .project-arrow {
+    transform: translate(3px, -3px);
+    color: #c084fc;
+  }
+}
+
+/* 4. Button feedback */
+.button,
+.project-open,
+.text-link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button:active,
+.project-open:active {
+  transform: scale(0.98);
+}
+
+/* 5. Purple particle layer */
+#purple-particle-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+/* Keep normal page content above the particles.
+   The modal has its own higher stacking order. */
+body > :not(#purple-particle-canvas) {
+  position: relative;
+  z-index: 1;
+}
+
+#projectModal {
+  z-index: 9999 !important;
+}
+
+/* 6. Reduced-motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-role-cursor {
+    animation: none;
+  }
+
+  .skill-card,
+  .project-card,
+  .project-card .project-art,
+  .project-card .project-arrow,
+  .button,
+  .project-open,
+  .text-link {
+    transition: none !important;
+  }
+
+  .skill-card:hover,
+  .project-card:hover {
+    transform: none !important;
+  }
+
+  #purple-particle-canvas {
+    opacity: 0.25;
+  }
+}
