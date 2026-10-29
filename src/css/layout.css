@@ -714,3 +714,220 @@ body > :not(#purple-particle-canvas) {
     transition: none !important;
   }
 }
+
+/* CASE STUDY MODAL — POLISHED INTERACTIONS */
+
+.case-study-panel .case-study-section {
+  position: relative;
+  padding: 18px;
+  margin-top: 16px;
+  border: 1px solid rgba(192, 132, 252, 0.15);
+  border-radius: 14px;
+  background: rgba(168, 85, 247, 0.035);
+  transition:
+    border-color 250ms ease,
+    background-color 250ms ease;
+}
+
+.case-study-panel .case-study-label {
+  color: #c084fc;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.case-study-panel .case-study-steps,
+.case-study-panel .case-study-features {
+  display: grid;
+  gap: 12px;
+}
+
+.case-study-panel .case-study-steps > *,
+.case-study-panel .case-study-features > * {
+  min-width: 0;
+}
+
+.case-study-panel .modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.case-study-panel .modal-tags > * {
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .case-study-panel .case-study-section:hover {
+    border-color: rgba(192, 132, 252, 0.35);
+    background: rgba(168, 85, 247, 0.065);
+  }
+
+  .case-study-panel .modal-tags > *:hover {
+    border-color: rgba(192, 132, 252, 0.55);
+    color: #e9d5ff;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-study-panel .case-study-section {
+    padding: 14px;
+  }
+
+  .case-study-panel .modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-study-panel .case-study-section,
+  .case-study-panel .modal-tags > * {
+    transition: none !important;
+  }
+}
+
+/* FIX: Keep the project modal fixed to the viewport */
+#projectModal {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Keep the project details panel inside the viewport */
+#projectModal .modal-panel {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 850px);
+  max-height: calc(100vh - 40px);
+  max-height: calc(100dvh - 40px);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  #projectModal {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  #projectModal .modal-panel {
+    width: 100%;
+    max-height: calc(100vh - 20px);
+    max-height: calc(100dvh - 20px);
+  }
+}
+
+/* FIX: Keep the project modal fixed to the viewport */
+#projectModal {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Keep the project details panel inside the viewport */
+#projectModal .modal-panel {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 850px);
+  max-height: calc(100vh - 40px);
+  max-height: calc(100dvh - 40px);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  #projectModal {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  #projectModal .modal-panel {
+    width: 100%;
+    max-height: calc(100vh - 20px);
+    max-height: calc(100dvh - 20px);
+  }
+}
+
+/* FIX: Keep the project modal fixed to the viewport */
+#projectModal {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Keep the project details panel inside the viewport */
+#projectModal .modal-panel {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 850px);
+  max-height: calc(100vh - 40px);
+  max-height: calc(100dvh - 40px);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  #projectModal {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  #projectModal .modal-panel {
+    width: 100%;
+    max-height: calc(100vh - 20px);
+    max-height: calc(100dvh - 20px);
+  }
+}
