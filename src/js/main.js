@@ -848,3 +848,42 @@ if (window.matchMedia("(pointer: fine)").matches && !reducedMotion) {
     }, 3000);
   });
 })();
+
+
+
+/* PROJECT CARDS — MOUSE-FOLLOWING GLOW */
+
+(() => {
+  const cards = document.querySelectorAll(
+    ".project-card[data-project]"
+  );
+
+  if (!cards.length) return;
+
+  const finePointer = window.matchMedia(
+    "(hover: hover) and (pointer: fine)"
+  );
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+
+  if (!finePointer.matches || reducedMotion.matches) return;
+
+  cards.forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      card.style.setProperty("--project-glow-x", `${x}px`);
+      card.style.setProperty("--project-glow-y", `${y}px`);
+    });
+
+    card.addEventListener("pointerleave", () => {
+      card.style.setProperty("--project-glow-x", "50%");
+      card.style.setProperty("--project-glow-y", "50%");
+    });
+  });
+})();

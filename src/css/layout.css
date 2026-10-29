@@ -612,3 +612,105 @@ body > :not(#purple-particle-canvas) {
     transform: none !important;
   }
 }
+
+/* =========================================
+   PROJECT SHOWCASE — INTERACTIVE PURPLE GLOW
+========================================= */
+
+.project-card {
+  position: relative;
+  isolation: isolate;
+  --project-glow-x: 50%;
+  --project-glow-y: 50%;
+
+  transition:
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+/* Mouse-following ambient light */
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  border: 1px solid rgba(192, 132, 252, 0.3);
+
+  background: radial-gradient(
+    300px circle at var(--project-glow-x) var(--project-glow-y),
+    rgba(168, 85, 247, 0.13),
+    transparent 70%
+  );
+
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+/* Keep card content visible above the glow */
+.project-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover::after {
+    opacity: 1;
+  }
+
+  .project-card:hover {
+    border-color: rgba(192, 132, 252, 0.6);
+    box-shadow:
+      0 14px 38px rgba(0, 0, 0, 0.25),
+      0 0 26px rgba(168, 85, 247, 0.13);
+  }
+
+  .project-card .project-art {
+    transition: filter 300ms ease;
+  }
+
+  .project-card:hover .project-art {
+    filter: brightness(1.08);
+  }
+
+  .project-card .project-arrow {
+    transition: transform 250ms ease, color 250ms ease;
+  }
+
+  .project-card:hover .project-arrow {
+    color: #c084fc;
+    transform: translate(3px, -3px);
+  }
+
+  .project-card .project-open {
+    transition: color 250ms ease;
+  }
+
+  .project-card:hover .project-open {
+    color: #c084fc;
+  }
+}
+
+/* Accessible keyboard focus */
+.project-card:focus-visible {
+  outline: 2px solid #c084fc;
+  outline-offset: 5px;
+}
+
+.project-card .project-open:focus-visible {
+  outline: 2px solid #c084fc;
+  outline-offset: 4px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-card::after,
+  .project-card .project-art,
+  .project-card .project-arrow,
+  .project-card .project-open {
+    transition: none !important;
+  }
+}
