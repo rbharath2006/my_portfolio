@@ -1,69 +1,168 @@
-# Bharath — Developer Portfolio
+# Bharath Raj — Developer Portfolio
 
-A responsive, dark-first developer portfolio built with HTML, CSS, JavaScript, Vite, and Three.js. Includes a live 3D hero scene, theme toggle, mobile navigation, scroll reveals, interactive project details, and project cards.
+A modern, interactive developer portfolio showcasing my work in cybersecurity, secure web development, and software engineering. Built with a dark purple visual theme, animated elements, and interactive project case studies.
 
-## Requirements
+## 🌐 Live Website
 
-- Node.js 20.19+ or 22.12+
-- npm
+**[Visit My Portfolio](https://my-portfolio-nu-lyart-77.vercel.app/)**
 
-## Run locally
+## ✨ Features
 
-```bash
-npm install
-npm run dev
+- **Modern UI:** Dark purple theme, gradients, glass-inspired elements, and responsive layouts.
+- **Interactive Hero Section:** Animated text, a Three.js visual scene, and atmospheric effects.
+- **Project Case Studies:** Detailed project descriptions, workflows, security features, and technology tags.
+- **Responsive Design:** Layouts designed for desktop, tablet, and mobile screens.
+- **Theme Switching:** Light and dark theme support with saved user preference.
+- **Interactive Animations:** Project-card effects, hover transitions, scroll reveals, and particle effects.
+- **Contact Section:** Email link, copy-email functionality, and professional social links.
+- **Accessibility:** Keyboard navigation, visible focus indicators, skip navigation, and reduced-motion support.
+
+## 🚀 Featured Projects
+
+### 1. QR Phishing Detector
+
+A Java and Spring Boot cybersecurity application designed to analyze URLs and QR-related inputs to help identify potentially malicious destinations.
+
+**Key capabilities:**
+- URL validation and normalization.
+- Threat-intelligence integration.
+- URL heuristic analysis and suspicious-pattern detection.
+- Redirect-chain analysis with loop detection.
+- Risk scoring and explanatory findings.
+- Isolated browser sandbox analysis using Playwright, Chromium, Docker, and a controlled egress environment.
+- Threat-intelligence ingestion and PostgreSQL storage.
+
+**Technologies:** Java, Spring Boot, PostgreSQL, Docker, Playwright, Maven, and cybersecurity analysis techniques.
+
+### 2. Secure Student Notes Web Application
+
+A web application developed to understand common web vulnerabilities and demonstrate how security controls can be implemented and tested.
+
+**Key capabilities:**
+- User registration and authentication.
+- Student notes creation, editing, and deletion.
+- SQL injection prevention through parameterized queries.
+- Password hashing.
+- Cross-site scripting (XSS) safeguards through template autoescaping.
+- Cross-site request forgery (CSRF) protection.
+- Secure session-cookie configuration and security headers.
+- Automated testing and database backup and recovery verification.
+
+**Technologies:** Python, Flask, SQLite, Flask-WTF, Jinja, Pytest, and PythonAnywhere.
+
+## 🛠️ Technology Stack
+
+| Category | Technologies |
+|---|---|
+| Frontend | HTML5, CSS3, JavaScript |
+| 3D Graphics | Three.js |
+| Build Tool | Vite |
+| Cybersecurity | URL analysis, threat intelligence, SQL injection, XSS, CSRF |
+| Backend Project 1 | Java, Spring Boot |
+| Backend Project 2 | Python, Flask |
+| Databases | PostgreSQL, SQLite |
+| Testing | Maven tests, Pytest |
+| Browser Analysis | Playwright, Chromium |
+| Containers | Docker |
+| Deployment | Vercel |
+
+## 📁 Project Structure
+
+```text
+my_portfolio/
+├── index.html
+├── package.json
+├── package-lock.json
+├── src/
+│   ├── css/
+│   │   ├── variables.css
+│   │   ├── layout.css
+│   │   └── responsive.css
+│   └── js/
+│       ├── main.js
+│       └── scene3d.js
+├── public/
+└── README.md
 ```
 
-Open the local URL printed by Vite (usually `http://localhost:5173`).
+*The structure above represents the main portfolio files; additional configuration and public assets may also be present.*
 
-## Production build
+## 💻 Run Locally
+
+### Prerequisites
+
+- Node.js and npm
+- Git
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/rbharath2006/my_portfolio.git
+   ```
+
+2. Open the project directory:
+
+   ```bash
+   cd my_portfolio
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL printed in the terminal.
+
+### Production Build
+
+Create an optimized production build:
 
 ```bash
 npm run build
+```
+
+To preview the production build locally:
+
+```bash
 npm run preview
 ```
 
-The production site is generated in `dist/`.
+Vite normally generates production files in the `dist/` directory.
 
-## Deploy
+## 🚀 Deployment
 
-### Vercel
-1. Push this folder to a GitHub repository.
-2. Import the repository in Vercel.
-3. Framework preset: Vite.
-4. Build command: `npm run build`.
-5. Output directory: `dist`.
+This portfolio is deployed using Vercel.
 
-### GitHub Pages
-For a project repository, configure the correct Vite `base` path in `vite.config.js` before deploying. Vercel is the easiest first deployment for this project.
+**Live URL:** https://my-portfolio-nu-lyart-77.vercel.app/
 
-## Before publishing
+The deployment workflow uses the Git repository and Vercel's build process. Future changes can be published by pushing commits to the configured production branch, provided automatic deployment is enabled.
 
-- Verify all personal details, event names, dates, and claims.
-- The current resume PDF is included at `public/resume.pdf`; replace it when you update your resume.
-- Add confirmed live demo and repository URLs for both projects.
-- Check the page on mobile, keyboard navigation, reduced-motion settings, and browsers without WebGL.
-- Do not publish any API keys, credentials, or private data.
+## 🔗 Connect With Me
 
-## Project highlights
+- **Portfolio:** [my-portfolio-nu-lyart-77.vercel.app](https://my-portfolio-nu-lyart-77.vercel.app/)
+- **GitHub:** [github.com/rbharath2006](https://github.com/rbharath2006)
+- **LinkedIn:** [R. Bharath](https://www.linkedin.com/in/r-bharath-a9415b333)
+- **HackerRank:** [rbharathBTECH24](https://www.hackerrank.com/profile/rbharathBTECH24)
+- **LeetCode:** [__rbharath__](https://leetcode.com/u/__rbharath__/)
+- **Email:** bharathrajb592@gmail.com
 
-- Three.js 3D object with pointer response and particle field.
-- Responsive mobile navigation and persisted dark/light theme.
-- Accessible project detail modal with Escape-to-close.
-- Reduced-motion handling and intersection-based reveal behavior.
-- No backend or database required.
+## 🎯 Purpose
 
+This portfolio serves as a central place to present my projects, technical skills, and learning journey in cybersecurity and software development. It also demonstrates my interest in building interactive interfaces and practical security-focused applications.
 
-## Phase 2 portfolio updates
+## 📄 License
 
-- Added Open Graph metadata and refined the page description for sharing/search previews.
-- Added spoken-language chips based on the resume.
-- Included the additional Coursera Sustainability, Responsibility & Ethics course in the certification list.
-- Improved project modal descriptions and added a verified GitHub profile link (not a fabricated project repository URL).
+Unless a license is added to the repository, all rights are reserved by the author. Contact me before reusing substantial portions of this project's source code or design.
 
-## Before publishing
+---
 
-1. Confirm all contact details and public profile URLs are correct.
-2. Add direct repository/demo URLs only after those URLs exist and are public.
-3. Run `npm install`, `npm run build`, then `npm run preview` to check the production build.
-4. Deploy the generated `dist` directory using a static host such as GitHub Pages, Netlify, or Vercel.
+**Built by Bharath Raj | Cybersecurity Enthusiast & Software Developer**
