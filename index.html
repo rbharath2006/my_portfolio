@@ -1,0 +1,658 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0614" />
+    <meta name="description" content="Bharath Raj — Computer Science and Cybersecurity student at Alliance University. Explore cybersecurity projects, secure software, and technical interests." />
+    <meta name="color-scheme" content="dark light" />
+    <meta property="og:title" content="Bharath — Cybersecurity Developer Portfolio" />
+    <meta property="og:description" content="Cybersecurity, secure software, and projects built with curiosity." />
+    <meta property="og:type" content="website" />
+
+    <title>Bharath — Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Bharath home">
+        <span class="brand-mark">B</span>
+        <span>bharath<span class="brand-dot">.</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a class="nav-contact" href="#contact">
+          Let's talk <span>↗</span>
+        </a>
+      </nav>
+
+      <button
+        class="theme-toggle"
+        aria-label="Switch color theme"
+        title="Switch color theme"
+      >
+        <span class="theme-icon">☼</span>
+      </button>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero section-wrap" id="home">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            COMPUTER SCIENCE · CYBERSECURITY
+          </div>
+
+          <h1>
+            Building a safer<br />
+            digital <span class="hero-gradient-text">tomorrow.</span>
+          </h1>
+
+          <!-- Animated typing role -->
+          <p class="hero-role-line">
+            <span class="hero-role-text">Cybersecurity Enthusiast</span>
+            <span class="hero-role-cursor" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero-intro">
+            I'm <strong>Bharath</strong> — a cybersecurity student and
+            developer who enjoys turning complex problems into useful,
+            secure software.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              Explore my work <span>↘</span>
+            </a>
+
+            <a class="button button-quiet" href="/resume.pdf" download>
+              Download resume <span>↓</span>
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span><i class="meta-line"></i> Based in Bengaluru, India</span>
+            <span class="mono">B.TECH · CLASS OF 2028</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Animated 3D abstract object">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+
+          <div id="scene3d" class="scene3d"></div>
+
+          <div class="visual-caption">
+            <span class="caption-pulse"></span>
+            CURIOUS BY DESIGN
+            <span class="caption-right">001 / 026</span>
+          </div>
+
+          <div class="floating-chip chip-top">
+            <span class="chip-icon">⌘</span>
+            Secure by design
+          </div>
+
+          <div class="floating-chip chip-bottom">
+            <span class="chip-icon">✳</span>
+            Always learning
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#about">
+          <span class="scroll-wheel"></span>
+          SCROLL TO EXPLORE
+        </a>
+      </section>
+
+      <!-- About -->
+      <section class="about section-wrap section-pad" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">01 / A LITTLE ABOUT ME</p>
+          <h2>
+            Curiosity is my<br />
+            <span class="muted-heading">starting point.</span>
+          </h2>
+        </div>
+
+        <div class="about-content reveal">
+          <p class="about-lead">
+            I’m pursuing a B.Tech in Computer Science and Engineering,
+            specializing in Cyber Security at Alliance University.
+          </p>
+
+          <p>
+            I’m interested in the space where software engineering meets
+            security: understanding how systems fail, how to protect them,
+            and how to make technology more dependable. I like learning by
+            building, testing, and improving real projects.
+          </p>
+
+          <div class="about-facts">
+            <div>
+              <span class="fact-number">9.02</span>
+              <span class="fact-label">CGPA · AS LISTED ON RESUME</span>
+            </div>
+
+            <div>
+              <span class="fact-number">2028</span>
+              <span class="fact-label">EXPECTED GRADUATION</span>
+            </div>
+
+            <div>
+              <span class="fact-number">∞</span>
+              <span class="fact-label">THINGS LEFT TO LEARN</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills section-wrap section-pad" id="skills">
+        <div class="section-heading">
+          <p class="eyebrow">02 / MY TOOLKIT</p>
+          <h2>
+            Tools for turning<br />
+            <span class="muted-heading">ideas into impact.</span>
+          </h2>
+        </div>
+
+        <div class="skills-grid reveal">
+          <article class="skill-card">
+            <span class="skill-index">01</span>
+            <div class="skill-symbol">⌘</div>
+            <h3>Programming</h3>
+            <p>C · C++ · Python · Java</p>
+            <div class="skill-track"><span style="width: 82%"></span></div>
+          </article>
+
+          <article class="skill-card">
+            <span class="skill-index">02</span>
+            <div class="skill-symbol">◈</div>
+            <h3>Cybersecurity</h3>
+            <p>Kali Linux · Wireshark · Nmap · Burp Suite · Metasploit</p>
+            <div class="skill-track"><span style="width: 76%"></span></div>
+          </article>
+
+          <article class="skill-card">
+            <span class="skill-index">03</span>
+            <div class="skill-symbol">⌬</div>
+            <h3>Core CS</h3>
+            <p>DSA · OOP · OS · DBMS · Computer Networks</p>
+            <div class="skill-track"><span style="width: 79%"></span></div>
+          </article>
+
+          <article class="skill-card">
+            <span class="skill-index">04</span>
+            <div class="skill-symbol">⤢</div>
+            <h3>Tools &amp; workflow</h3>
+            <p>Git · GitHub · VS Code · Linux</p>
+            <div class="skill-track"><span style="width: 78%"></span></div>
+          </article>
+        </div>
+
+        <div class="language-strip">
+          <span class="language-label">SPOKEN LANGUAGES</span>
+          <span>English</span>
+          <span>Telugu</span>
+          <span>Hindi</span>
+          <span>Kannada</span>
+        </div>
+
+        <p class="section-note">
+          Skill bars are visual accents, not formal proficiency ratings.
+        </p>
+      </section>
+
+      <!-- Projects -->
+      <section class="projects section-wrap section-pad" id="projects">
+        <div class="projects-head">
+          <div class="section-heading">
+            <p class="eyebrow">03 / SELECTED WORK</p>
+            <h2>
+              Built to solve.<br />
+              <span class="muted-heading">Made to learn.</span>
+            </h2>
+          </div>
+
+          <p class="projects-intro">
+            A few projects where I explored security, engineering, and the
+            details that make software more resilient.
+          </p>
+        </div>
+
+        <div class="project-grid reveal">
+          <article
+            class="project-card project-featured"
+            tabindex="0"
+            role="button"
+            data-project="qr"
+          >
+            <div class="project-art qr-art">
+              <div class="art-grid"></div>
+
+              <div class="qr-scan">
+                <div class="qr-corner c1"></div>
+                <div class="qr-corner c2"></div>
+                <div class="qr-corner c3"></div>
+                <div class="qr-corner c4"></div>
+
+                <div class="qr-code">
+                  <span></span><span></span><span></span>
+                  <span></span><span></span><span></span>
+                  <span></span><span></span><span></span>
+                </div>
+
+                <div class="scan-line"></div>
+              </div>
+
+              <span class="art-label">THREAT ANALYSIS / 001</span>
+              <span class="art-orb"></span>
+            </div>
+
+            <div class="project-info">
+              <div class="project-topline">
+                <span class="project-type">CYBERSECURITY · JAVA</span>
+                <span class="project-arrow">↗</span>
+              </div>
+
+              <h3>QR Phishing Detector</h3>
+
+              <p>
+                Detect suspicious QR destinations and URLs with layered
+                analysis designed to make hidden threats easier to spot.
+              </p>
+
+              <div class="tag-row">
+                <span>URL heuristics</span>
+                <span>Typosquatting</span>
+                <span>JUnit</span>
+              </div>
+
+              <button class="text-link project-open" data-project="qr">
+                Explore project <span>↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="project-card"
+            tabindex="0"
+            role="button"
+            data-project="secure"
+          >
+            <div class="project-art secure-art">
+              <div class="terminal-window">
+                <div class="terminal-bar">
+                  <i></i><i></i><i></i>
+                  <span>security_audit.sh</span>
+                </div>
+
+                <div class="terminal-lines">
+                  <p><b>$</b> inspect --target notes-app</p>
+                  <p class="terminal-ok">✓ SQL injection mitigation</p>
+                  <p class="terminal-ok">✓ CSRF protection</p>
+                  <p class="terminal-ok">✓ XSS safeguards</p>
+                  <p class="terminal-cursor">_</p>
+                </div>
+              </div>
+
+              <span class="art-label">SECURE DEVELOPMENT / 002</span>
+            </div>
+
+            <div class="project-info">
+              <div class="project-topline">
+                <span class="project-type">ETHICAL HACKING · FLASK</span>
+                <span class="project-arrow">↗</span>
+              </div>
+
+              <h3>Secure Web Application</h3>
+
+              <p>
+                A Student Notes application used to study common web
+                vulnerabilities, apply defenses, and retest the hardened
+                version.
+              </p>
+
+              <div class="tag-row">
+                <span>SQLi</span>
+                <span>XSS</span>
+                <span>CSRF</span>
+                <span>SQLite</span>
+              </div>
+
+              <button class="text-link project-open" data-project="secure">
+                Explore project <span>↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card project-placeholder" tabindex="0">
+            <div class="project-art future-art">
+              <div class="future-ring">+</div>
+              <span class="art-label">NEXT CHAPTER / 003</span>
+            </div>
+
+            <div class="project-info">
+              <div class="project-topline">
+                <span class="project-type">IN PROGRESS</span>
+                <span class="project-arrow">↗</span>
+              </div>
+
+              <h3>What comes next?</h3>
+
+              <p>
+                More experiments, more lessons, and more tools built to make
+                the digital world a little better.
+              </p>
+
+              <div class="tag-row">
+                <span>Learning</span>
+                <span>Building</span>
+                <span>Iterating</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="section-note">
+          Project cards open a summary. Add verified repository and demo
+          URLs before publishing.
+        </p>
+      </section>
+
+      <!-- Journey -->
+      <section class="journey section-wrap section-pad" id="journey">
+        <div class="section-heading">
+          <p class="eyebrow">04 / LEARNING IN PUBLIC</p>
+          <h2>
+            The journey<br />
+            <span class="muted-heading">is the point.</span>
+          </h2>
+        </div>
+
+        <div class="timeline reveal">
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">EDUCATION · 2024—2028</div>
+            <div>
+              <h3>B.Tech, Computer Science &amp; Engineering</h3>
+              <p>Cyber Security · Alliance University</p>
+            </div>
+            <span class="timeline-tag">CURRENT</span>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">HACKATHON · 2026</div>
+            <div>
+              <h3>Smart India Hackathon</h3>
+              <p>
+                Participated with a problem statement on quantum-inspired
+                cyber threat detection for digital signature security.
+              </p>
+            </div>
+            <span class="timeline-tag">PARTICIPANT</span>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">WORKSHOP · 2026</div>
+            <div>
+              <h3>EC-Council Cybersecurity Workshop</h3>
+              <p>
+                Workshop participation · Quantum Computing and AI workshop
+                also listed on resume.
+              </p>
+            </div>
+            <span class="timeline-tag">LEARNING</span>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">COMMUNITY</div>
+            <div>
+              <h3>HackerRank Orchestrate · September Edition</h3>
+              <p>
+                Participation in a HackerRank community/technical event.
+              </p>
+            </div>
+            <span class="timeline-tag">PARTICIPANT</span>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">COMMUNITY</div>
+            <div>
+              <h3>Indian Data Club Meetup</h3>
+              <p>Participation in a technology and data community meetup.</p>
+            </div>
+            <span class="timeline-tag">PARTICIPANT</span>
+          </article>
+        </div>
+
+        <div class="certifications reveal">
+          <p class="eyebrow">CERTIFICATIONS &amp; COURSEWORK</p>
+
+          <div class="cert-list">
+            <span>Oracle Cloud Infrastructure AI Foundations</span>
+            <span>NPTEL · Data Structures &amp; Algorithms</span>
+            <span>NPTEL · Introduction to Database Systems</span>
+            <span>Google · Foundations of Cybersecurity</span>
+            <span>Oracle · Java Certified Foundations Associate</span>
+            <span>Coursera · Sustainability, Responsibility &amp; Ethics</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact section-wrap section-pad" id="contact">
+        <div class="contact-panel reveal">
+          <div class="contact-glow"></div>
+
+          <p class="eyebrow">05 / YOUR TURN</p>
+
+          <h2>
+            Have a problem<br />
+            worth <span class="hero-gradient-text">solving?</span>
+          </h2>
+
+          <p class="contact-copy">
+            I'm always up for learning, collaborating, and building things
+            that matter. Let's connect.
+          </p>
+
+          
+<div class="contact-actions">
+  <a class="button button-primary" href="mailto:bharathrajb592@gmail.com">
+    Say hello <span>↗</span>
+  </a>
+
+  <button
+    class="button button-quiet copy-email-button"
+    type="button"
+    data-copy-email="bharathrajb592@gmail.com"
+  >
+    Copy email <span aria-hidden="true">⧉</span>
+  </button>
+</div>
+
+<p class="copy-email-status" role="status" aria-live="polite"></p>
+
+
+          <div class="contact-footer">
+            <span>OPEN TO LEARNING &amp; COLLABORATION</span>
+            <span class="mono">BENGALURU, INDIA</span>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/rbharath2006" target="_blank" rel="noreferrer">
+            GitHub <span>↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/r-bharath-a9415b333" target="_blank" rel="noreferrer">
+            LinkedIn <span>↗</span>
+          </a>
+          <a href="https://www.hackerrank.com/profile/rbharathBTECH24" target="_blank" rel="noreferrer">
+            HackerRank <span>↗</span>
+          </a>
+          <a href="https://leetcode.com/u/__rbharath__/" target="_blank" rel="noreferrer">
+            LeetCode <span>↗</span>
+          </a>
+          <a href="mailto:bharathrajb592@gmail.com">
+            Email <span>↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer section-wrap">
+      <a class="brand" href="#home">
+        <span class="brand-mark">B</span>
+        <span>bharath<span class="brand-dot">.</span></span>
+      </a>
+
+      <span>Designed with curiosity. Built with intent.</span>
+
+      <span class="mono">© <span id="year"></span> BHARATH</span>
+    </footer>
+
+    <!-- Project Case Study Modal -->
+    <div
+      class="modal"
+      id="projectModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-backdrop" data-close></div>
+
+      <div class="modal-panel case-study-panel" role="document">
+        <button
+          class="modal-close"
+          aria-label="Close project details"
+          data-close
+        >
+          &times;
+        </button>
+
+        <p class="eyebrow" id="modalEyebrow">PROJECT CASE STUDY</p>
+        <h2 id="modalTitle">Project title</h2>
+        <p class="case-study-intro" id="modalIntro"></p>
+
+        <div class="case-study-section">
+          <p class="case-study-label">OVERVIEW</p>
+          <p id="modalOverview"></p>
+        </div>
+
+        <div class="case-study-section">
+          <p class="case-study-label" id="modalProcessLabel">HOW IT WORKS</p>
+          <div class="case-study-steps" id="modalProcess"></div>
+        </div>
+
+        <div class="case-study-section">
+          <p class="case-study-label" id="modalSecurityLabel">KEY FEATURES</p>
+          <div class="case-study-features" id="modalSecurity"></div>
+        </div>
+
+        <div class="case-study-section">
+          <p class="case-study-label">TECHNOLOGIES</p>
+          <div class="modal-tags" id="modalTags"></div>
+        </div>
+
+        <p class="modal-note" id="modalNote">
+          Technical details describe the project's documented implementation.
+        </p>
+
+        <div class="modal-actions">
+          <a
+            class="button button-primary"
+            href="https://github.com/rbharath2006"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit GitHub <span>↗</span>
+          </a>
+
+          <button class="button button-quiet" data-close>
+            Back to portfolio <span>↗</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
+
+/* Copy email button fix */
+(() => {
+  const button = document.querySelector("[data-copy-email]");
+  const status = document.querySelector(".copy-email-status");
+
+  if (!button || button.dataset.copyFixAdded) return;
+  button.dataset.copyFixAdded = "true";
+
+  button.addEventListener("click", async () => {
+    const email = button.getAttribute("data-copy-email");
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        const field = document.createElement("textarea");
+        field.value = email;
+        field.style.position = "fixed";
+        field.style.opacity = "0";
+        document.body.appendChild(field);
+        field.select();
+
+        const success = document.execCommand("copy");
+        field.remove();
+
+        if (!success) throw new Error("Copy failed");
+      }
+
+      if (status) status.textContent = "Email copied successfully!";
+      button.innerHTML = 'Copied! <span aria-hidden="true">✓</span>';
+    } catch (error) {
+      if (status) {
+        status.textContent = "Copy failed. Email: " + email;
+      }
+    }
+
+    setTimeout(() => {
+      if (status) status.textContent = "";
+      button.innerHTML =
+        'Copy email <span aria-hidden="true">⧉</span>';
+    }, 3000);
+  });
+})();
